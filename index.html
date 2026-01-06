@@ -3,34 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Linga Raja Ramamoorthi</title>
+    <title>My Professional Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        .hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .hover-lift:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+    </style>
 </head>
-<body class="bg-gray-900 text-white font-sans">
-    <div class="max-w-3xl mx-auto px-6 py-20">
-        <header class="mb-12">
-            <h1 class="text-4xl font-bold mb-2">Hi, I'm [Your Name]</h1>
-            <p class="text-gray-400 text-xl">Welcome to my professional portfolio.</p>
-        </header>
+<body class="bg-slate-50 text-slate-900 font-sans selection:bg-blue-100">
 
-        <section class="grid gap-8">
-            <div class="border-l-4 border-blue-500 pl-4">
-                <h2 class="text-2xl font-semibold">About Me</h2>
-                <p class="text-gray-400 mt-2">I am a passionate creator focused on building great things.</p>
+    <nav class="p-6 max-w-5xl mx-auto flex justify-between items-center animate__animated animate__fadeInDown">
+        <h1 class="text-xl font-bold tracking-tighter">PORTFOLIO<span class="text-blue-600">.</span></h1>
+        <a href="mailto:your@email.com" class="bg-black text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-blue-600 transition-colors">Contact Me</a>
+    </nav>
+
+    <header class="py-20 px-6 text-center max-w-3xl mx-auto">
+        <div class="animate__animated animate__fadeInUp">
+            <span class="px-3 py-1 text-xs font-semibold bg-blue-100 text-blue-700 rounded-full uppercase tracking-wider">Available for work</span>
+            <h2 class="text-5xl md:text-6xl font-black mt-4 mb-6 tracking-tight">I design & build <span class="text-blue-600">digital experiences.</span></h2>
+            <p class="text-lg text-slate-500 leading-relaxed">I'm [Your Name], a creative developer focusing on clean code and beautiful user interfaces.</p>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 pb-20">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            
+            <div class="md:col-span-2 bg-white p-8 rounded-3xl border border-slate-200 hover-lift animate__animated animate__fadeInLeft">
+                <span class="text-blue-600 font-bold text-sm uppercase">Featured Project</span>
+                <h3 class="text-2xl font-bold mt-2">Mobile Banking App</h3>
+                <p class="text-slate-500 mt-2 mb-6">A full redesign of a fintech application focusing on user accessibility.</p>
+                <div class="w-full h-48 bg-slate-100 rounded-xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000" alt="Project" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity">
+                </div>
             </div>
 
-            <div class="border-l-4 border-green-500 pl-4">
-                <h2 class="text-2xl font-semibold">My Projects</h2>
-                <ul class="mt-2 space-y-2 text-gray-400">
-                    <li>• Project 1: Description of your work</li>
-                    <li>• Project 2: Description of your work</li>
+            <div class="bg-blue-600 text-white p-8 rounded-3xl hover-lift animate__animated animate__fadeInRight">
+                <h3 class="text-xl font-bold">Skills & Tools</h3>
+                <ul class="mt-4 space-y-2 opacity-90">
+                    <li>• React / Next.js</li>
+                    <li>• Tailwind CSS</li>
+                    <li>• UI/UX Design</li>
+                    <li>• GitHub Workflow</li>
                 </ul>
             </div>
-        </section>
 
-        <footer class="mt-20 pt-8 border-t border-gray-800">
-            <p>Connect with me: <a href="mailto:you@email.com" class="text-blue-400">Email</a></p>
-        </footer>
-    </div>
+            <div class="bg-white p-8 rounded-3xl border border-slate-200 hover-lift animate__animated animate__fadeInUp animate__delay-1s">
+                <h3 class="text-xl font-bold">Web Strategy</h3>
+                <p class="text-slate-500 mt-2 text-sm">Helping startups grow through optimized landing pages.</p>
+            </div>
+
+            <div class="md:col-span-2 bg-slate-900 text-white p-8 rounded-3xl hover-lift animate__animated animate__fadeInUp animate__delay-1s">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="text-2xl font-bold">E-commerce Solution</h3>
+                        <p class="text-slate-400 mt-2">Custom built Shopify storefront.</p>
+                    </div>
+                    <div class="text-3xl">🚀</div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="text-center py-10 border-t border-slate-200 text-slate-400 text-sm">
+        <p>&copy; 2026 [Your Name]. Built with GitHub Pages.</p>
+    </footer>
+
 </body>
 </html>
