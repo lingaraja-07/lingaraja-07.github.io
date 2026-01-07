@@ -3,10 +3,10 @@
 // ============================================
 // Update image paths here to change images across the entire portfolio
 // All paths are relative to the index.html file
-
+import profilePic from './assets/images/profile.png'
 const ImageConfig = {
     // Profile Photo (circular image in header)
-    profile: "assets/images/profile.png",
+    profile: "{profilePic}",
 
     // Project Images
     projects: {
