@@ -1,74 +1,328 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Professional Portfolio</title>
+    <title>Linga Raja Ramamoorthi</title>
+    <meta name="description"
+        content="Professional VLSI and semiconductor design portfolio showcasing RTL design, FSM implementations, and digital circuit expertise">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <style>
-        .hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
-        .hover-lift:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <script src="images-config.js"></script>
 </head>
-<body class="bg-slate-50 text-slate-900 font-sans selection:bg-blue-100">
 
-    <nav class="p-6 max-w-5xl mx-auto flex justify-between items-center animate__animated animate__fadeInDown">
-        <h1 class="text-xl font-bold tracking-tighter">PORTFOLIO<span class="text-blue-600">.</span></h1>
-        <a href="mailto:your@email.com" class="bg-black text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-blue-600 transition-colors">Contact Me</a>
+<body class="bg-slate-950 text-slate-100 font-sans selection:bg-blue-500 selection:text-white">
+
+    <!-- Scan Line Effect -->
+    <div class="scan-line"></div>
+
+    <!-- Navigation -->
+    <nav
+        class="sticky top-0 bg-slate-900/95 backdrop-blur-sm border-b border-slate-800 z-50 animate__animated animate__fadeInDown">
+        <div class="p-6 max-w-5xl mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold tracking-tighter">VLSI<span class="text-blue-500">DESIGN</span></h1>
+            <div class="flex gap-6 items-center">
+                <a href="#about"
+                    class="nav-link text-slate-400 hover:text-blue-400 transition-colors text-sm font-medium">About</a>
+                <a href="#skills"
+                    class="nav-link text-slate-400 hover:text-blue-400 transition-colors text-sm font-medium">Skills</a>
+                <a href="#projects"
+                    class="nav-link text-slate-400 hover:text-blue-400 transition-colors text-sm font-medium">Projects</a>
+                <a href="#contact"
+                    class="glow-button bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-blue-500 transition-colors">Contact</a>
+            </div>
+        </div>
     </nav>
 
-    <header class="py-20 px-6 text-center max-w-3xl mx-auto">
-        <div class="animate__animated animate__fadeInUp">
-            <span class="px-3 py-1 text-xs font-semibold bg-blue-100 text-blue-700 rounded-full uppercase tracking-wider">Available for work</span>
-            <h2 class="text-5xl md:text-6xl font-black mt-4 mb-6 tracking-tight">I design & build <span class="text-blue-600">digital experiences.</span></h2>
-            <p class="text-lg text-slate-500 leading-relaxed">I'm [Your Name], a creative developer focusing on clean code and beautiful user interfaces.</p>
+    <!-- Header / Hero Section with Split Layout -->
+    <header id="about" class="py-20 px-6 max-w-6xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-12 animate__animated animate__fadeInUp">
+
+            <!-- Left Side: Text Content -->
+            <div class="flex-1 text-left">
+                <span
+                    class="inline-block px-3 py-1 text-xs font-semibold bg-blue-900/50 text-blue-400 rounded-full uppercase tracking-wider border border-blue-700 mb-6">
+                    Open to work
+                </span>
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-black mb-6 tracking-tight">
+                    <span class="text-blue-1000 ">Linga Raja Ramamoorthi</span>
+                </h2>
+                <p class="text-lg text-slate-400 leading-relaxed max-w-xl mb-8">
+                    I'm a VLSI Design Engineer specializing in RTL design, finite state machines, and digital circuit
+                    architecture. Passionate about creating efficient and reliable semiconductor solutions from
+                    specification to silicon.
+                </p>
+
+                <!-- Quick Stats or Skills -->
+                <div class="flex flex-wrap gap-4">
+                    <div class="bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-2">
+                        <div class="skill-icon text-blue-400 text-xl inline-block mr-2">⚡</div>
+                        <span class="text-sm text-slate-300">RTL Design</span>
+                    </div>
+                    <div class="bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-2">
+                        <div class="skill-icon text-blue-400 text-xl inline-block mr-2">🔧</div>
+                        <span class="text-sm text-slate-300">Verilog/SystemVerilog</span>
+                    </div>
+                    <div class="bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-2">
+                        <div class="skill-icon text-blue-400 text-xl inline-block mr-2">💾</div>
+                        <span class="text-sm text-slate-300">Digital Design</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Profile Image with Animations -->
+            <div class="flex-shrink-0 relative profile-container">
+                <!-- Decorative animated circle -->
+                <div class="profile-ring"></div>
+                <div class="profile-ring-2"></div>
+
+                <!-- Profile Image -->
+                <img src="assets/images/profile.png" alt="Profile Photo" class="profile-img-right relative z-10">
+
+                <!-- Floating particles around image -->
+                <div class="profile-particle profile-particle-1"></div>
+                <div class="profile-particle profile-particle-2"></div>
+                <div class="profile-particle profile-particle-3"></div>
+            </div>
+
         </div>
     </header>
 
+    <!-- Main Content -->
     <main class="max-w-5xl mx-auto px-6 pb-20">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            
-            <div class="md:col-span-2 bg-white p-8 rounded-3xl border border-slate-200 hover-lift animate__animated animate__fadeInLeft">
-                <span class="text-blue-600 font-bold text-sm uppercase">Featured Project</span>
-                <h3 class="text-2xl font-bold mt-2">Mobile Banking App</h3>
-                <p class="text-slate-500 mt-2 mb-6">A full redesign of a fintech application focusing on user accessibility.</p>
-                <div class="w-full h-48 bg-slate-100 rounded-xl overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000" alt="Project" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity">
+
+        <!-- Skills Section -->
+        <section id="skills" class="mb-16 fade-in-section">
+            <h3 class="text-3xl font-bold mb-8 text-center">Skills & Tools</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+                <div class="bg-slate-900 border border-slate-800 p-8 rounded-3xl hover-lift">
+                    <div class="skill-icon text-blue-500 text-3xl mb-4">⚡</div>
+                    <h4 class="text-xl font-bold mb-4">HDL & RTL Design</h4>
+                    <ul class="space-y-2 text-slate-400">
+                        <li>• Verilog</li>
+                        <li>• SystemVerilog</li>
+                        <li>• VHDL</li>
+                        <li>• RTL Synthesis</li>
+                    </ul>
                 </div>
-            </div>
 
-            <div class="bg-blue-600 text-white p-8 rounded-3xl hover-lift animate__animated animate__fadeInRight">
-                <h3 class="text-xl font-bold">Skills & Tools</h3>
-                <ul class="mt-4 space-y-2 opacity-90">
-                    <li>• React / Next.js</li>
-                    <li>• Tailwind CSS</li>
-                    <li>• UI/UX Design</li>
-                    <li>• GitHub Workflow</li>
-                </ul>
-            </div>
+                <div class="bg-blue-600 text-white p-8 rounded-3xl hover-lift">
+                    <div class="skill-icon text-white text-3xl mb-4">🔧</div>
+                    <h4 class="text-xl font-bold mb-4">EDA Tools</h4>
+                    <ul class="space-y-2 opacity-90">
+                        <li>• Cadence Virtuoso</li>
+                        <li>• Synopsys Design Compiler</li>
+                        <li>• ModelSim / Questa</li>
+                        <li>• Xilinx Vivado</li>
+                    </ul>
+                </div>
 
-            <div class="bg-white p-8 rounded-3xl border border-slate-200 hover-lift animate__animated animate__fadeInUp animate__delay-1s">
-                <h3 class="text-xl font-bold">Web Strategy</h3>
-                <p class="text-slate-500 mt-2 text-sm">Helping startups grow through optimized landing pages.</p>
-            </div>
+                <div class="bg-slate-900 border border-slate-800 p-8 rounded-3xl hover-lift">
+                    <div class="skill-icon text-blue-500 text-3xl mb-4">📐</div>
+                    <h4 class="text-xl font-bold mb-4">Core Expertise</h4>
+                    <ul class="space-y-2 text-slate-400">
+                        <li>• FSM Design</li>
+                        <li>• Digital Design</li>
+                        <li>• Timing Analysis</li>
+                        <li>• IC Layout</li>
+                    </ul>
+                </div>
 
-            <div class="md:col-span-2 bg-slate-900 text-white p-8 rounded-3xl hover-lift animate__animated animate__fadeInUp animate__delay-1s">
-                <div class="flex justify-between items-start">
-                    <div>
-                        <h3 class="text-2xl font-bold">E-commerce Solution</h3>
-                        <p class="text-slate-400 mt-2">Custom built Shopify storefront.</p>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="mb-16 fade-in-section">
+            <h3 class="text-3xl font-bold mb-8 text-center">Featured Projects</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+                <!-- Main Featured Project -->
+                <div class="md:col-span-2 bg-slate-900 border border-slate-800 p-8 rounded-3xl hover-lift">
+                    <span class="text-blue-500 font-bold text-sm uppercase tracking-wider">Featured Project</span>
+                    <h4 class="text-2xl font-bold mt-2 mb-2">32-bit RISC Processor Design</h4>
+                    <p class="text-slate-400 mb-6">Complete RTL implementation of a pipelined RISC processor with hazard
+                        detection and forwarding units. Synthesized and verified using SystemVerilog testbenches.</p>
+                    <div class="w-full h-48 bg-slate-800 rounded-xl overflow-hidden mb-4 border border-slate-700">
+                        <img id="risc-processor-img" src="assets/images/risc-processor.jpg"
+                            alt="RISC Processor Block Diagram"
+                            class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity">
                     </div>
-                    <div class="text-3xl">🚀</div>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="px-3 py-1 bg-slate-800 text-blue-400 rounded-full text-xs border border-slate-700">Verilog</span>
+                        <span
+                            class="px-3 py-1 bg-slate-800 text-blue-400 rounded-full text-xs border border-slate-700">RTL
+                            Design</span>
+                        <span
+                            class="px-3 py-1 bg-slate-800 text-blue-400 rounded-full text-xs border border-slate-700">Pipelining</span>
+                    </div>
+                </div>
+
+                <!-- Side Project Card -->
+                <div class="bg-slate-900 border border-slate-800 p-8 rounded-3xl hover-lift">
+                    <div class="text-3xl mb-3">🔄</div>
+                    <h4 class="text-xl font-bold mb-2">T Flip-Flop Design</h4>
+                    <p class="text-slate-400 text-sm mb-4">Optimized T flip-flop implementation with asynchronous reset
+                        and clock gating for low power applications.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="px-3 py-1 bg-slate-800 text-blue-400 rounded-full text-xs border border-slate-700">Verilog</span>
+                        <span
+                            class="px-3 py-1 bg-slate-800 text-blue-400 rounded-full text-xs border border-slate-700">Low
+                            Power</span>
+                    </div>
+                </div>
+
+                <!-- FSM Project -->
+                <div class="bg-slate-900 border border-slate-800 p-8 rounded-3xl hover-lift">
+                    <div class="text-3xl mb-3">🔀</div>
+                    <h4 class="text-xl font-bold mb-2">Sequence Detector FSM</h4>
+                    <p class="text-slate-400 text-sm mb-4">Moore and Mealy FSM implementations for pattern detection
+                        with comprehensive verification environment.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="px-3 py-1 bg-slate-800 text-blue-400 rounded-full text-xs border border-slate-700">FSM</span>
+                        <span
+                            class="px-3 py-1 bg-slate-800 text-blue-400 rounded-full text-xs border border-slate-700">Verilog</span>
+                    </div>
+                </div>
+
+                <!-- Memory Controller Project -->
+                <div
+                    class="md:col-span-2 bg-gradient-to-br from-blue-900 to-slate-900 text-white p-8 rounded-3xl hover-lift border border-blue-800">
+                    <div class="flex justify-between items-start">
+                        <div class="flex-1">
+                            <h4 class="text-2xl font-bold mb-2">DDR Memory Controller</h4>
+                            <p class="text-slate-300 mb-4">High-performance memory controller with advanced timing
+                                optimizations and command scheduling algorithms.</p>
+                            <div
+                                class="w-full h-32 bg-slate-800/50 rounded-xl overflow-hidden mb-4 border border-blue-700/30">
+                                <img id="memory-controller-img" src="assets/images/memory-controller.jpg"
+                                    alt="Memory Controller Architecture"
+                                    class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity">
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="px-3 py-1 bg-blue-800/50 text-blue-200 rounded-full text-xs border border-blue-600">SystemVerilog</span>
+                                <span
+                                    class="px-3 py-1 bg-blue-800/50 text-blue-200 rounded-full text-xs border border-blue-600">DDR4</span>
+                                <span
+                                    class="px-3 py-1 bg-blue-800/50 text-blue-200 rounded-full text-xs border border-blue-600">Cadence</span>
+                            </div>
+                        </div>
+                        <div class="text-4xl ml-4">💾</div>
+                    </div>
+                </div>
+
+                <!-- ALU Project -->
+                <div class="bg-slate-900 border border-slate-800 p-8 rounded-3xl hover-lift">
+                    <div class="text-3xl mb-3">🔢</div>
+                    <h4 class="text-xl font-bold mb-2">16-bit ALU</h4>
+                    <p class="text-slate-400 text-sm mb-4">Arithmetic Logic Unit supporting 12 operations with carry
+                        lookahead adder for improved performance.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="px-3 py-1 bg-slate-800 text-blue-400 rounded-full text-xs border border-slate-700">Verilog</span>
+                        <span
+                            class="px-3 py-1 bg-slate-800 text-blue-400 rounded-full text-xs border border-slate-700">RTL</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="fade-in-section">
+            <div
+                class="bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700 p-12 rounded-3xl text-center">
+                <h3 class="text-3xl font-bold mb-4">Let's Connect</h3>
+                <p class="text-slate-400 mb-8 max-w-2xl mx-auto">
+                    Interested in collaborating on VLSI projects or discussing digital design opportunities?
+                    Feel free to reach out!
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="mailto:your.email@example.com"
+                        class="bg-blue-600 text-white px-8 py-3 rounded-full font-medium hover:bg-blue-500 transition-colors inline-flex items-center gap-2">
+                        📧 Email Me
+                    </a>
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank"
+                        class="bg-slate-700 text-white px-8 py-3 rounded-full font-medium hover:bg-slate-600 transition-colors inline-flex items-center gap-2 border border-slate-600">
+                        💼 LinkedIn
+                    </a>
+                    <a href="https://github.com/yourusername" target="_blank"
+                        class="bg-slate-700 text-white px-8 py-3 rounded-full font-medium hover:bg-slate-600 transition-colors inline-flex items-center gap-2 border border-slate-600">
+                        💻 GitHub
+                    </a>
                 </div>
             </div>
+        </section>
 
-        </div>
     </main>
 
-    <footer class="text-center py-10 border-t border-slate-200 text-slate-400 text-sm">
-        <p>&copy; 2026 [Your Name]. Built with GitHub Pages.</p>
+    <!-- Footer -->
+    <footer class="text-center py-10 border-t border-slate-800 text-slate-500 text-sm">
+        <p>&copy; 2026 VLSI Design Portfolio. Built with passion for semiconductor innovation.</p>
     </footer>
 
+    <!-- Scroll Animation Script -->
+    <script>
+        // Fade in sections on scroll
+        const faders = document.querySelectorAll('.fade-in-section');
+
+        const appearOptions = {
+            threshold: 0.15,
+            rootMargin: "0px 0px -100px 0px"
+        };
+
+        const appearOnScroll = new IntersectionObserver(function (entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('is-visible');
+                    appearOnScroll.unobserve(entry.target);
+                }
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+
+        // Auto-hide navigation on scroll up
+        let lastScrollTop = 0;
+        const nav = document.querySelector('nav');
+        let scrollTimeout;
+
+        window.addEventListener('scroll', function () {
+            // Clear the timeout throughout the scroll
+            clearTimeout(scrollTimeout);
+
+            // Set a timeout to run after scrolling ends
+            scrollTimeout = setTimeout(function () {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                if (scrollTop > lastScrollTop && scrollTop > 100) {
+                    // Scrolling down - show navbar
+                    nav.style.transform = 'translateY(0)';
+                } else if (scrollTop < lastScrollTop) {
+                    // Scrolling up - hide navbar
+                    nav.style.transform = 'translateY(-100%)';
+                }
+
+                // If at top of page, always show navbar
+                if (scrollTop <= 100) {
+                    nav.style.transform = 'translateY(0)';
+                }
+
+                lastScrollTop = scrollTop;
+            }, 10); // Small delay for smooth detection
+        });
+    </script>
+
 </body>
+
 </html>
